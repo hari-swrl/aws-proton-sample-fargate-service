@@ -3,8 +3,7 @@ FROM node:12.19.0-alpine
 WORKDIR /usr/src/app
 COPY package*.json ./
 RUN npm install
-RUN ls 
-RUN ls ../
-RUN pwd
 EXPOSE 3000
+COPY . .
+RUN echo $(ls -l)
 CMD ["npm", "run", "start"]
