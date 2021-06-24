@@ -35,6 +35,17 @@
         fetch('http://be-api.example.local:3000/')
             .then(response => response.json())
             .then(data => console.log(data));
+
+            fetch('http://be-api.example.local:80/')
+            .then(response => response.json())
+            .then(data => console.log(data));
+
+            fetch('http://be-api.example.local:8080/')
+            .then(response => response.json())
+            .then(data => console.log(data));
+            fetch('http://be-api.example.local/')
+            .then(response => response.json())
+            .then(data => console.log(data));
     </script>
 </body>
 </html>
