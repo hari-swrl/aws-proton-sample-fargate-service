@@ -31,7 +31,6 @@ app.get('/', async (req, res) => {
        }
        console.log(process.env)
     res.json({message: 'From gateway', ...result})
-
     // backendapi_be-api
 })
 app.listen(80, () => console.log('Server ready', process.env))
