@@ -5,4 +5,4 @@ app.get('/', (req, res) =>{
 console.log("micro", "*****")
  res.json({message: 'Hello from micro!'})
 })
-app.listen(80, () => console.log('Server ready'))
+app.listen(80, () => console.log('Server ready', process.env))
