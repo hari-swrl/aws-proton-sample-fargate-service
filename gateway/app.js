@@ -15,13 +15,13 @@ app.get('/', async (req, res) => {
     result.try2 = await axios.get("http://be-api.example.local:3000/")
     result.try2 =  result.try2.data
     }catch(error){
-        result.try1=error.toString() 
+        result.try2=error.toString() 
     }
     try{
      result.try3 = await axios.get("http://be-api.example.local/")
     result.try3 =  result.try3.data
     }catch(error){
-        result.try1=error.toString() 
+        result.try3=error.toString() 
     }
     res.json({message: 'From gateway', ...result})
 })
