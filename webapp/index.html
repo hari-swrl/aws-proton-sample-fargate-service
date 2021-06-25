@@ -32,20 +32,26 @@
         </svg>
     </div>
     <script>
-        fetch('http://be-api.example.local:3000/')
+        fetch('http://gateway.example.local:3000/')
             .then(response => response.json())
             .then(data => console.log(data));
 
-            fetch('http://be-api.example.local:80/')
+            fetch('http://gateway.example.local:80/')
             .then(response => response.json())
             .then(data => console.log(data));
 
-            fetch('http://be-api.example.local:8080/')
+            fetch('http://gateway.example.local:8080/')
             .then(response => response.json())
             .then(data => console.log(data));
-            fetch('http://be-api.example.local/')
+            fetch('http://gateway.example.local/')
             .then(response => response.json())
             .then(data => console.log(data));
+
+        //domain
+        fetch('http://hari-test.link/')
+            .then(response => response.json())
+            .then(data => console.log(data));
+
     </script>
 </body>
 </html>

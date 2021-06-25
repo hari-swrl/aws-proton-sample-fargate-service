@@ -1,0 +1,9 @@
+# FROM node:12.19.0-alpine
+FROM public.ecr.aws/bitnami/node:latest
+WORKDIR /usr/src/app
+COPY package*.json ./
+RUN npm install
+EXPOSE 80
+COPY . .
+RUN echo $(ls -l)
+CMD ["npm", "run", "start"]
