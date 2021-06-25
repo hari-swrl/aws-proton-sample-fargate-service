@@ -24,10 +24,10 @@ app.get('/', async (req, res) => {
            result.try4=error.toString() 
        }
        try{
-        result.try4 = await axios.get("http://backendapi_be-api.example.local/")
-       result.try4 =  result.try4.data
+        result.try5 = await axios.get("http://backendapi_be-api.example.local/")
+       result.try5 =  result.try5.data
        }catch(error){
-           result.try4=error.toString() 
+           result.try5=error.toString() 
        }
        console.log(prcess.env)
     res.json({message: 'From gateway', ...result})
