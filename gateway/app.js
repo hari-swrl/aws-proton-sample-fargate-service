@@ -13,7 +13,7 @@ app.get('/', async (req, res) => {
         result.be=error.toString() 
     }
     try{
-        result.pro = await axios.get("http://pro-api.example.local/")
+        result.pro = await axios.get("http://pro-api.example.local:4002/")
        result.prop =  result.pro.data
        }catch(error){
            result.pro=error.toString() 
