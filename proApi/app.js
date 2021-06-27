@@ -3,6 +3,6 @@ const app = express()
 
 app.get('/', (req, res) =>{
 console.log("micro", "*****")
- res.json({message: 'Hello from be micro!'})
+ res.json({message: 'Hello from pro micro!'})
 })
-app.listen(80, () => console.log('Server ready', process.env))
+app.listen(4002, () => console.log('Server ready', process.env))

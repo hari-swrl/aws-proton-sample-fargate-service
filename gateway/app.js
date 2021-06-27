@@ -5,31 +5,19 @@ const app = express();
 app.get('/', async (req, res) => {
     let result = { }
     // http://be-api.example.local/
+
     try{
-    result.try2 = await axios.get("http://be-api.example.local:3000/")
-    result.try2 =  result.try2.data
+     result.be = await axios.get("http://be-api.example.local/")
+    result.be =  result.be.data
     }catch(error){
-        result.try2=error.toString() 
+        result.be=error.toString() 
     }
     try{
-     result.try3 = await axios.get("http://be-api.example.local/")
-    result.try3 =  result.try3.data
-    }catch(error){
-        result.try3=error.toString() 
-    }
-    try{
-        result.try4 = await axios.get("http://backendapi_be-api.be-api.example.local/")
-       result.try4 =  result.try4.data
+        result.pro = await axios.get("http://backendapi_be-api.be-api.example.local/")
+       result.prop =  result.pro.data
        }catch(error){
-           result.try4=error.toString() 
+           result.pro=error.toString() 
        }
-       try{
-        result.try5 = await axios.get("http://backendapi_be-api.example.local/")
-       result.try5 =  result.try5.data
-       }catch(error){
-           result.try5=error.toString() 
-       }
-       console.log(process.env)
     res.json({message: 'From gateway', ...result})
     // backendapi_be-api
 })
