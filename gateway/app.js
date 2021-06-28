@@ -13,12 +13,12 @@ app.get('/', async (req, res) => {
         result.be=error.toString() 
     }
     try{
-        result.pro = await axios.get("http://pro-api.example.local:4002/")
-        result.pro =  result.pro.data
+        result.try2 = await axios.get("http://pro-api.example.local:4002/")
+        result.try2 =  result.try2.data
        }catch(error){
-           result.pro=error.toString() 
+           result.try2=error.toString() 
        }
-    res.json({message: 'From gateway', ...result})
+    res.json({message: 'From gateway', beResult: result.be, proResult: result.try2})
     // backendapi_be-api
 })
 app.listen(80, () => console.log('Server ready', process.env))
